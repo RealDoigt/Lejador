@@ -1,0 +1,35 @@
+form
+{
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    border: .25vw solid rgb(200, 200, 225);
+}
+
+form *
+{
+    max-width: 25vw;
+    margin: auto;
+    margin-top: 1vh;
+}
+
+[type="submit"]
+{
+    color: inherit;
+    margin-bottom: 1vh;
+    border-radius: 0 0 0 0;
+    background-color: inherit;
+    border: .20vw solid rgb(200, 200, 225);
+}
+
+[type="submit"]:hover
+{
+     background-color: rgba(200, 200, 225, 1);
+     color: rgb(100, 100, 125);
+}
+
+[type="submit"]:active
+{
+     background-color: rgba(100, 100, 125, .5);
+     color: rgb(10, 10, 25);
+}
