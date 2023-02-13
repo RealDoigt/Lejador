@@ -54,3 +54,8 @@ nav div:active
      background-color: rgba(100, 100, 125, .5);
      color: rgb(10, 10, 25);
 }
+
+h1
+{
+    font-size: 3vw;
+}
