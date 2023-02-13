@@ -33,3 +33,16 @@ Lo es la mesma cosa per la `Moderor` e la `Moderor xef`; la xef pote fa tota cua
 |La ator sutrae sua pajes|Creor|19|
 |La ator cambia la preferes de sua pajes|Creor|20|
 |La ator cambia la preferes de sua banda de cartunes|Creor|20|
+|La ator cambia la descrive de sua banda de cartunes|Creor|21|
+|La ator sutrae un comenta|Moderor|22|
+|La ator sutrae un grado|Moderor|23|
+|La ator sutrae un banda de cartunes|Moderor|24|
+|La ator sutrae un paje|Moderor|25|
+|La ator envia un averti|Moderor|26|
+|La ator cambia un comenta|Moderor|27|
+|La ator cambia la testo de un grado|Moderor|28|
+|La ator cambia un descrive|Moderor|29|
+|La ator cambia un nom de conta|Moderor|30|
+|La ator desativi un conta|Moderor|31
+|La ator leje un conversa privata (sola con la demanda de un de la conversores)|Moderor xef|32|
+|La ator cambia la tipo de un conta|Moderor xef|33|
