@@ -28,6 +28,12 @@ nav a, nav a:visited
     font-size: 2vw;
 }
 
+nav div
+{
+    border-left: .05vw solid transparent;
+    border-right: .05vw solid transparent;
+}
+
 nav div:hover
 {
      border-left: .05vw solid rgb(200, 200, 225);
