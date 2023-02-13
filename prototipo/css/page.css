@@ -1,0 +1,32 @@
+article:first-child
+{
+    display: flex;
+    flex-direction: column;
+}
+
+img
+{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.nav-page
+{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-page a
+{
+    padding: .05vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 1.175vw;
+    color: rgb(200, 200, 225);
+    border-bottom: .20vw solid transparent;
+}
+
+.nav-page a:hover
+{
+    border-bottom: .20vw solid rgb(200, 200, 225);
+}
