@@ -3,9 +3,12 @@
 La projeta es desiniada par goles cual pote es esplicada par un asosia de atores e sua roles. La projeta ave sinco atores:
 * Usor anonim
 * Usor enscriveda
-* Autor
+* Creor
 * Moderor
 * Moderor xef
+
+On debe nota ce la tre ultima atores es varias de un `Usor enscriveda`, donce los pote fa tota cual el pote.
+Lo es la mesma cosa per la `Moderor` e la `Moderor xef`; la xef pote fa tota cual la moderor pote.
 
 |descrive|ator(es)|numero de la rol|
 |-|-|-|
@@ -13,3 +16,14 @@ La projeta es desiniada par goles cual pote es esplicada par un asosia de atores
 |La ator autentici se|Usor anonim|2|
 |La ator enscrive se|Usor anonim|3|
 |La ator vide la lista de bande de cartunes|Tota|4|
+|La ator leje sua avisas|Usor enscriveda|5|
+|La ator gradi un banda de cartunes|Usor enscriveda|6|
+|La ator segue un banda de cartunes|Usor enscriveda|7|
+|La ator segue un creor|Usor enscriveda|8|
+|La ator xerca un banda de cartunes|Usor enscriveda|9|
+|La ator leje un paje privata (si el ave la permete)|Usor enscriveda|10|
+|La ator comenta sur un paje de banda de cartunes|Usor enscriveda|11|
+|La ator sutrae sua comentas|Usor enscriveda|12|
+|La ator envia un mesaje privata|Usor enscriveda|13|
+|La ator leje sua mesajes privata|Usor enscriveda|14|
+|la ator cambia sua preferes|Usor enscriveda|15|
