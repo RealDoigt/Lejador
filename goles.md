@@ -46,3 +46,18 @@ Lo es la mesma cosa per la `Moderor` e la `Moderor xef`; la xef pote fa tota cua
 |La ator desativi un conta|Moderor|31
 |La ator leje un conversa privata (sola con la demanda de un de la conversores)|Moderor xef|32|
 |La ator cambia la tipo de un conta|Moderor xef|33|
+
+Prosima la fin de la primavera 2023, aceles va es fada:
+* 1
+* 2
+* 3
+* 4
+* 6
+* 11
+* 12
+* 16
+* 18
+* 19
+* 22
+* 23
+* 31
