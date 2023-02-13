@@ -26,4 +26,10 @@ Lo es la mesma cosa per la `Moderor` e la `Moderor xef`; la xef pote fa tota cua
 |La ator sutrae sua comentas|Usor enscriveda|12|
 |La ator envia un mesaje privata|Usor enscriveda|13|
 |La ator leje sua mesajes privata|Usor enscriveda|14|
-|la ator cambia sua preferes|Usor enscriveda|15|
+|La ator cambia sua preferes|Usor enscriveda|15|
+|La ator crea un banda de cartunes|Creor|16|
+|La ator sutrae sua banda de cartunes|Creor|17|
+|La ator carga un paje|Creor|18|
+|La ator sutrae sua pajes|Creor|19|
+|La ator cambia la preferes de sua pajes|Creor|20|
+|La ator cambia la preferes de sua banda de cartunes|Creor|20|
