@@ -1,6 +1,7 @@
 main > div
 {
     display: flex;
+    border: .25vw solid rgb(200, 200, 225);
 }
 
 img
