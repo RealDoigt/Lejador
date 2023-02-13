@@ -1,0 +1,15 @@
+main > div
+{
+    display: flex;
+}
+
+img
+{
+    height: 30vh;
+    width: 15vw;
+}
+
+aside
+{
+    margin-right: 1vw;
+}
