@@ -1,0 +1,21 @@
+.comments
+{
+    margin-top: 1vh;
+    font-size: 1vw;
+}
+
+.comments p
+{
+    border: .25vw solid rgb(200, 200, 225);
+}
+
+.comments b
+{
+    background-color: rgb(200, 200, 225);
+    color: rgb(25, 25, 25);
+}
+
+.comments i
+{
+    color: rgb(100, 100, 125)
+}
