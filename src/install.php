@@ -78,7 +78,7 @@ function create_tables($connection)
                 'date_published date not null',
                 'comic_id int not null',
                 'primary key(page_id)',
-                'foreign key(comic_id) references(comic_id)'
+                'foreign key(comic_id) references Comics(comic_id)'
             ),
 
             'Pages'
