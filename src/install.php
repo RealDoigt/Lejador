@@ -22,10 +22,7 @@ class Table
     function create($connection)
     {
         $query = "create table $this->name (";
-
-        foreach ($this->attributes as $att)
-            $query .= "$att,";
-
+        implode(",", $this->attributes);
         $query .= ');';
 
         $connection->query($query);
