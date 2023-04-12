@@ -22,17 +22,18 @@ class table
     $attributes;
     $name;
 
-    function __construct($attribute_array, $table_name)
+    function __construct($attributes, $name)
     {
-        $attributes = array();
+        $this->attributes = array();
+        array_push($this->attributes, $attributes);
 
-        foreach ($attribute as $attribute_array) 
-           $attributes[$attribute] = $attribute_array[$attribute];
-
-        $name = $table_name;
+        $this->name = $name;
     }
 
+    function create($connection)
+    {
 
+    }
 }
 
 function main()
