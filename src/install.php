@@ -152,6 +152,8 @@ function main()
 
         create_tables($connection);
     }
+
+    $connection->close();
 }
 
 main();
