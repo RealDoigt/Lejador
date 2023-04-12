@@ -4,7 +4,7 @@ function create_db($server, $username, $password, $connection)
 {
     $result = -1;
 
-    if ($connection->query('create database lejadorDB'))
+    if ($connection->query('create database lejadorDB;'))
     {
         $settings_file = fopen('settings.csv', 'w');
 
@@ -17,7 +17,7 @@ function create_db($server, $username, $password, $connection)
     return $result;
 }
 
-class table
+class Table
 {
     $attributes;
     $name;
@@ -32,7 +32,14 @@ class table
 
     function create($connection)
     {
+        $query = "create table $name (";
 
+        for ($this->attributes as $att)
+            $query .= "$att,";
+
+        $query .= ');';
+
+        $connection->query($query);
     }
 }
 
@@ -40,7 +47,7 @@ function main()
 {
     $connection = new mysqli('localhost', 'root', '');
     if ($connection->connect_error) die($conn->connect_error);
-
+    if (
     
 }
 
