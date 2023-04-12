@@ -15,9 +15,7 @@ class Table
 
     function __construct($attributes, $name)
     {
-        $this->attributes = array();
-        array_push($this->attributes, ...$attributes);
-
+        $this->attributes = $attributes;
         $this->name = $name;
     }
 
