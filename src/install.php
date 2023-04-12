@@ -1,6 +1,6 @@
 <?php
 
-if (!isset($_POST['username']))
+if (!isset($_POST['host']))
 {
     header('location: install.htm');
     exit;
@@ -137,7 +137,12 @@ function create_tables($connection)
 
 function main()
 {
-    $connection = new mysqli('localhost', 'root', '');
+    //$connection = new mysqli('localhost', 'root', '');
+    $server = $_POST['host'];
+    $username = $_POST['user'];
+    $password = $_POST['pass'];
+
+    $connection = new mysqli($server, $username, $password);
 
     if ($connection->connect_error) die($conn->connect_error);
 
