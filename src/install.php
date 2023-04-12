@@ -20,15 +20,19 @@ function create_db($server, $username, $password, $connection)
 class table
 {
     $attributes;
+    $name;
 
-    function __construct($attribute_array)
+    function __construct($attribute_array, $table_name)
     {
         $attributes = array();
 
         foreach ($attribute as $attribute_array) 
            $attributes[$attribute] = $attribute_array[$attribute];
 
+        $name = $table_name;
     }
+
+
 }
 
 function main()
