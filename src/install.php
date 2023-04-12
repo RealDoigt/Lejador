@@ -1,5 +1,5 @@
 <?php
-function create_db($server)
+function create_db($connection)
 {
     $result = -1;
 
@@ -15,8 +15,8 @@ function create_db($server)
 
 class Table
 {
-    $attributes;
-    $name;
+    private $attributes;
+    private $name;
 
     function __construct($attributes, $name)
     {
@@ -30,7 +30,7 @@ class Table
     {
         $query = "create table $name (";
 
-        for ($this->attributes as $att)
+        foreach ($this->attributes as $att)
             $query .= "$att,";
 
         $query .= ');';
@@ -80,7 +80,7 @@ function create_tables($connection)
                 'page_id int not null auto_increment',
                 'page_number int not null',
                 'image_path varchar not null',
-                'date_published date not null'
+                'date_published date not null',
                 'comic_id int not null',
                 'primary key(page_id)',
                 'foreign key(comic_id) references(comic_id)'
@@ -99,7 +99,7 @@ function create_tables($connection)
                 'commenter_id int not null',
                 'page_id int not null',
                 'primary key(comment_id)',
-                'foreign key(comment_id) references Users(user_id)',
+                'foreign key(commenter_id) references Users(user_id)',
                 'foreign key(page_id) references Pages(page_id)'
             ),
 
@@ -125,7 +125,7 @@ function create_tables($connection)
         ),
     );
 
-    for ($tables as $t) $t->create($connection);
+    foreach ($tables as $t) $t->create($connection);
 }
 
 function main()
