@@ -34,6 +34,8 @@ class Table
 
 function create_tables($connection)
 {
+    $connection->select_db("lejadorDB");
+
     $tables = array
     (
         new Table
