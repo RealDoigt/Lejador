@@ -1,11 +1,4 @@
 <?php
-
-if (!isset($_POST['host']))
-{
-    header('location: install.htm');
-    exit;
-}
-
 function create_db($server)
 {
     $result = -1;
@@ -137,6 +130,12 @@ function create_tables($connection)
 
 function main()
 {
+    if (!isset($_POST['host']))
+    {
+        header('location: install.htm');
+        exit;
+    }
+
     //$connection = new mysqli('localhost', 'root', '');
     $server = $_POST['host'];
     $username = $_POST['user'];
@@ -150,6 +149,8 @@ function main()
     {
         fwrite($settings_file, "$server,$username,$password");
         fclose($settings_file);
+
+        create_tables($connection);
     }
 }
 
