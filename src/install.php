@@ -1,16 +1,11 @@
 <?php
 function create_db($connection)
 {
-    $result = -1;
-
     if ($connection->query('create database lejadorDB;'))
-    {
-        $settings_file = fopen('settings.csv', 'w');
-        $result = 0;
-    }
+        return 0;
 
-    else echo $connection->error;
-    return $result;
+    echo $connection->error;
+    return -1;
 }
 
 class Table
@@ -147,6 +142,7 @@ function main()
 
     if (create_db($connection) === 0)
     {
+        $settings_file = fopen('settings.csv', 'w');
         fwrite($settings_file, "$server,$username,$password");
         fclose($settings_file);
 
