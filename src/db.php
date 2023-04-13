@@ -1,10 +1,10 @@
 <?php
 
-    class TableHelper
+    class Table_Helper
     {
         private $connection;
 
-        function __construct(protected $attributes, protected $name, private $id_name)
+        function __construct(protected $attributes, protected $name)
         {
             $settings_file = fopen('settings.csv', 'r');
             $settings = explode(',', fread($settings_file));
@@ -28,6 +28,14 @@
         protected function get_values($fields = ['*'])
         {
             return $this->connection->query('select ' . implode(',', $fields) . " from $this->name;");
+        }
+    }
+
+    class User_Helper extends Table_Helper
+    {
+        function __construct()
+        {
+            parent::__construct(['name', 'pass', 'is_admin', 'is_moderator', 'is_creator'], 'Users');
         }
     }
 ?>
