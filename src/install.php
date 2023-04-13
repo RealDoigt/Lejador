@@ -41,6 +41,7 @@ function create_tables($connection)
                 'is_admin boolean not null',
                 'is_moderator boolean not null',
                 'is_creator boolean not null',
+                'is_banned boolean not null',
                 'primary key(user_id)'
             ),
 
