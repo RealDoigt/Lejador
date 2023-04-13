@@ -46,7 +46,7 @@
     {
         function __construct()
         {
-            parent::__construct(['name', 'pass', 'is_admin', 'is_moderator', 'is_creator'], 'Users');
+            parent::__construct(['name', 'pass', 'is_admin', 'is_moderator', 'is_creator', 'is_banned'], 'Users');
         }
 
         function create($username, $password)
@@ -62,7 +62,10 @@
             return $this->get_values(['count(user_id)']);
         }
 
-        private function
+        private function user_has($username, $attribute)
+        {
+            return $this->connection->query("select $attribute from " . $this->get_name() . " where name = '$username';") !== '';
+        }
 
         private function user_exists($username)
         {
