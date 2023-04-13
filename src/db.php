@@ -4,7 +4,7 @@
     {
         private $connection;
 
-        function __construct()
+        function __construct(protected $attributes, protected $name)
         {
             $settings_file = fopen('settings.csv', 'r');
             $settings = explode(',', fread($settings_file));
@@ -18,7 +18,7 @@
         {
             $connection->close();
         }
+
+
     }
-
-
 ?>
