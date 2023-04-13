@@ -67,7 +67,7 @@ function create_tables($connection)
             (
                 'page_id int not null auto_increment',
                 'page_number int not null',
-                'image_path varchar not null',
+                'image_path varchar(50) not null',
                 'date_published date not null',
                 'comic_id int not null',
                 'primary key(page_id)',
@@ -126,7 +126,7 @@ function main()
 
     $server = $_POST['host'];
     $username = $_POST['user'];
-    $password = isset($_POST['pass']) ? '';
+    $password = isset($_POST['pass']) ? $_POST['pass'] : '';
 
     $connection = new mysqli($server, $username, $password);
 
