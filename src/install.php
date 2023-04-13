@@ -124,10 +124,9 @@ function main()
         exit;
     }
 
-    //$connection = new mysqli('localhost', 'root', '');
     $server = $_POST['host'];
     $username = $_POST['user'];
-    $password = $_POST['pass'];
+    $password = isset($_POST['pass']) ? '';
 
     $connection = new mysqli($server, $username, $password);
 
