@@ -46,7 +46,7 @@
 
         function create_user($username, $password)
         {
-            $this->insert_into([$username, crypt($password, $this->get_salt(), $this->get_user_count() == 0 ? 1 : 0, 0, 0]));
+            $this->insert_into([$username, crypt($password, $this->get_salt()), $this->get_user_count() == 0 ? 1 : 0, 0, 0]);
         }
 
         private function get_user_count()
