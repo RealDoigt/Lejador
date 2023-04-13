@@ -36,7 +36,7 @@ function create_tables($connection)
             array
             (
                 'user_id int not null auto_increment',
-                'name varchar(20) not null',
+                'name varchar(20) unique not null',
                 'pass varchar(60) not null',
                 'is_admin boolean not null',
                 'is_moderator boolean not null',
