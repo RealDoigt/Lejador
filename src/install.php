@@ -22,7 +22,9 @@ class Table
     function create($connection)
     {
         $query = "create table $this->name (";
-        implode(",", $this->attributes);
+
+        $query = implode(",", $this->attributes);
+
         $query .= ');';
 
         $connection->query($query);
