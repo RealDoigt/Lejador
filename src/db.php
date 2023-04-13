@@ -33,7 +33,12 @@
 
         protected function get_salt()
         {
-            return $salt;
+            return $this->salt;
+        }
+
+        protected function get_name()
+        {
+            return $this->name;
         }
     }
 
@@ -44,14 +49,35 @@
             parent::__construct(['name', 'pass', 'is_admin', 'is_moderator', 'is_creator'], 'Users');
         }
 
-        function create_user($username, $password)
+        function create($username, $password)
         {
+            if (user_exists($username)) return 1;
+
             $this->insert_into([$username, crypt($password, $this->get_salt()), $this->get_user_count() == 0 ? 1 : 0, 0, 0]);
+            return 0;
         }
 
         private function get_user_count()
         {
             return $this->get_values(['count(user_id)']);
+        }
+
+        private function
+
+        private function user_exists($username)
+        {
+            return $this->connection->query('select name from ' . $this->get_name() . " where name = '$username';") !== '';
+        }
+
+        private function user_banned($username)
+        {
+            return $this->connection->query('select name from ' . $this->get_name() . " where name = '$username';") !== '';
+        }
+
+        function validate_user($username)
+        {
+            if (user_exists($username))
+                if ()
         }
     }
 ?>
