@@ -25,7 +25,7 @@
             if (!$this->connection->query($query)) echo $query;
         }
 
-        procected function get_values($fields = ['*'])
+        protected function get_values($fields = ['*'])
         {
             return $this->connection->query('select ' . implode(',', $fields) . " from $this->name;");
         }
