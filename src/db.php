@@ -1,6 +1,6 @@
 <?php
 
-    abstract class TableHelper
+    class TableHelper
     {
         private $connection;
 
@@ -19,6 +19,11 @@
             $connection->close();
         }
 
+        function insert_into($values)
+        {
+            $query = "insert into $name (" implode(',' )
+            foreach ($this->attributes as $att)
 
+        }
     }
 ?>
