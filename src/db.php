@@ -69,7 +69,7 @@
 
         private function user_exists($username)
         {
-            return $this->connection->query('select name from ' . $this->get_name() . " where name = '$username';") !== '';
+            return $this->user_has($username, 'name');
         }
 
         private function user_banned($username)
