@@ -130,7 +130,7 @@ function main()
 
     $connection = new mysqli($server, $username, $password);
 
-    if ($connection->connect_error) die($conn->connect_error);
+    if ($connection->connect_error) die($connection->connect_error);
 
     if (create_db($connection) === 0)
     {

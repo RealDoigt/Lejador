@@ -10,7 +10,7 @@
             $settings = explode(',', fread($settings_file));
             $connection = new mysqli($settings[0], $settings[1], $settings[2]);
 
-            if ($connection->connect_error) die($conn->connect_error);
+            if ($connection->connect_error) die($connection->connect_error);
             $connection->select_db('lejadorDB');
         }
 
@@ -19,10 +19,10 @@
             $connection->close();
         }
 
-        function insert_into($values)
+        protected function insert_into($values)
         {
-            $query = "insert into $name (" implode(',' )
-            foreach ($this->attributes as $att)
+            $query = "insert into $name (" . implode(',', $attributes) . 'values (' . implode(',', $values) . ');';
+            if (!$connection->query($query)) echo $query;
 
         }
     }
