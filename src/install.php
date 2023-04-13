@@ -21,13 +21,7 @@ class Table
 
     function create($connection)
     {
-        $query = "create table $this->name (";
-
-        $query = implode(",", $this->attributes);
-
-        $query .= ');';
-
-        $connection->query($query);
+        $connection->query("create table $this->name (" . implode(",", $this->attributes) . ');');
     }
 }
 
