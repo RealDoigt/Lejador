@@ -7,10 +7,13 @@
 
         function __construct(protected $attributes, protected $name, private $id)
         {
+            $settings = [];
             $settings_file = fopen('settings.csv', 'r');
-            $settings = explode(',', fread($settings_file));
-            $this->connection = new mysqli($settings[0], $settings[1], $settings[2]);
+            $settings = explode(',', fread($settings_file, filesize(settings.csv)));
 
+            fclose($settings_file);
+
+            $this->connection = new mysqli($settings[0], $settings[1], $settings[2]);
             if ($this->connection->connect_error) die($connection->connect_error);
             $this->connection->select_db('lejadorDB');
         }
@@ -33,7 +36,7 @@
 
         protected function get_all_values_by_id($id)
         {
-            return mysqli_fetch_assoc($this->connection->query("select * from $this->name where $this->id = '$id';");
+            return mysqli_fetch_assoc($this->connection->query("select * from $this->name where $this->id = '$id';"));
         }
 
         protected function get_salt()
@@ -64,12 +67,12 @@
 
         private function get_user_count()
         {
-            return $this->get_values(['count(user_id)']);
+            return $this->get_values(['count(user_id)'])['count(user_id)'];
         }
 
         private function get_value($username, $attribute)
         {
-            return $this->connection->query("select $attribute from " . $this->get_name() . " where name = '$username';");
+            return mysqli_fetch_assoc($this->connection->query("select $attribute from " . $this->get_name() . " where name = '$username';"))[$attribute];
         }
 
         private function user_exists($username)
@@ -106,4 +109,7 @@
             }
         }
     }
+
+    $test = new User_Helper();
+    $test->create_user('test', 'hello');
 ?>
